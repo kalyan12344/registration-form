@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+</head>
+
+<body>
+    <section class="main-container">
+        <form class="container">
+            <h1 class="form-heading">register</h1>
+
+            <p class="form-desc">
+                create your account its free and only take a minute
+            </p>
+            <div class="sub-container">
+                <div class="name">
+                    <input type="text" name="firstname" class="firstname" onblur="this.placeholder='First Name'" onfocus="this.placeholder=''" placeholder="First Name" required />
+                    <input type="text" name="lastname" class="lastname" onblur="this.placeholder='Last Name'" onfocus="this.placeholder=''" placeholder="Last Name" required />
+                    <p class="contains-symbol error-message hidden">
+                        First Name and Last Name should only have alphabets
+                    </p>
+                </div>
+
+                <input type="email" name="email" class="email" placeholder="Email" onblur="this.placeholder='Email'" onfocus="this.placeholder=''" required />
+                <div class="pass-eye">
+                    <input type="password" name="password" onfocus="this.placeholder=''" onblur="this.placeholder='Password'" class="password" placeholder="Password" required />
+                    <i id="eye" onclick="showPassword()" class="bi bi-eye"></i>
+                </div>
+
+                <p class="atleast error-message hidden">
+                    Must contain atleast 8 characters
+                </p>
+                <p class="password-req error-message hidden">
+                    atleast one symbol,one number
+                </p>
+                <div class="confirm-pass-eye"></div>
+                <input type="password" name="confirmpassword" onblur="this.placeholder='Confirm Password'" onfocus="this.placeholder=''" class="confirm-password" placeholder="Confirm Password" id="" required />
+
+                <p class="do-not-match error-message hidden">Password didnot match</p>
+                <div class="terms">
+                    <input type="checkbox" name="check-box" onfocus="this.placeholder=''" class="check-box" id="check-box" />
+                    <label for="check-box">I accept the <a href="#">Terms of Use</a> &
+            <a href="#"> Privacy Policy</a></label
+          >
+        </div>
+        <button type="submit" class="register">REGISTER</button>
+      </div>
+    </form>
+</section>
+<section class="signin-page invisible">
+    <div class="signin-page-container">
+        <h1 class="signin-header">SIGN IN
+        </h1>
+        <div class="signin-fields">
+            <input type="text" placeholder="Email ID" class="signin-email" onblur="this.placeholder='Email'" onfocus="this.placeholder=''" >
+            <input type="password" placeholder="Password" class="signin-password"  onblur="this.placeholder='Password'" onfocus="this.placeholder=''" >
+        </div>
+        <button class="signin-button">SignIn</button>
+    </div>
+</section>
+
+
+    <script src="./scripts.js"></script>
+  </body>
+</html>
